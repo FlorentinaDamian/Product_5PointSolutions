@@ -1,0 +1,16 @@
+.flash {
+     padding: 10px 14px; 
+     border-radius: 4px; 
+     margin-bottom: 12px; 
+    }
+.flash[hidden] {
+     display: none; 
+    }
+.flash.success { 
+    background: #dff3e0; 
+    color: #1e6b2a; 
+}
+.flash.error { 
+    background: #f6dede; 
+    color: #8a1f1f; 
+}

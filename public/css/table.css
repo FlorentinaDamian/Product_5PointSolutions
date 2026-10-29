@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+h1 {
+    color: #2c3e50;
+}
+form {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+input[type="text"] {
+    padding: 8px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+button {
+    padding: 8px 12px;
+    background-color: #ab5824;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #983f1c;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #633131;
+    color: #c6c2b1;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+.toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.toolbar form { margin: 0; }
+.clear { margin-left: 8px; color: #633131; }
+.clear[hidden] { display: none; }
+#product-list[aria-busy="true"] { opacity: .6; transition: opacity .15s; }
+.btn { display: inline-block; padding: 8px 12px; background-color: #ab5824; color: white; border-radius: 4px; text-decoration: none; }
+.btn:hover { background-color: #983f1c; }
+.table-wrap { overflow-x: auto; }
+.thumb { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; display: block; }
+.empty { text-align: center; color: #777; }
+.actions { white-space: nowrap; }
+.badge { padding: 3px 8px; border-radius: 10px; font-size: 12px; }
+.badge.in { background: #dff3e0; color: #1e6b2a; }
+.badge.out { background: #f6dede; color: #8a1f1f; }
+button.danger { background-color: #b3261e; }
+button.danger:hover { background-color: #8c1d18; }
+button.secondary { background-color: #777; }
+.pagination { margin-top: 16px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.pagination a { padding: 8px 12px; background: #fff; border: 1px solid #ddd; border-radius: 4px; color: #633131; text-decoration: none; }
+.pagination a.active { background: #ab5824; color: #fff; border-color: #ab5824; }
+.pagination a:hover:not(.active) { background: #f1e6df; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: flex; align-items: center; justify-content: center; z-index: 10; }
+.modal[hidden] { display: none; }
+.modal-box { background: #fff; padding: 24px; border-radius: 8px; max-width: 420px; width: calc(100% - 40px); }
+.modal-box h2 { margin-top: 0; color: #2c3e50; }
+.modal-box form { margin: 0; display: block; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+@media (max-width: 720px) {
+    body { margin: 12px; }
+    .toolbar { flex-direction: column; align-items: stretch; }
+    .toolbar form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; width: 100%; }
+    .toolbar form input[type="text"] { flex: 1 1 140px; width: auto; margin-right: 0; min-width: 0; }
+    .toolbar > .btn { text-align: center; }
+
+    .table-wrap { overflow: visible; }
+    table, tbody { display: block; background: none; box-shadow: none; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    tr, tr:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    }
+    td {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 12px;
+        align-items: center;
+        border: 0;
+        padding: 4px 0;
+    }
+    td:empty { display: none; } 
+    td::before { content: attr(data-label); font-weight: bold; color: #633131; }
+    td.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; white-space: normal; }
+    td.actions::before { flex: 0 0 110px; }
+    tr.empty-row { display: block; text-align: center; }
+    tr.empty-row td { display: block; }
+    tr.empty-row td::before { content: none; }
+    .pagination a { padding: 10px 14px; }
+    .modal-box { padding: 18px; }
+}

@@ -1,0 +1,4 @@
+public/uploads/*
+!public/uploads/.gitkeep
+src/bd/config.local.php
+.vscode
