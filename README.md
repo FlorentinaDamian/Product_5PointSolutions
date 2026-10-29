@@ -15,3 +15,10 @@ Listing, search, pagination, create, edit and delete all work without a full pag
 - output is HTML-escaped; 
 - POST actions are CSRF-protected.
 - Images: JPG/PNG/GIF/WEBP up to 2 MB, content-type verified, stored under a random name; replaced/deleted images are removed from disk.
+
+## Screenshots
+
+![List of products](image.png)
+![Form](image-1.png)
+![Pages](image-2.png)
+![Search](image-3.png)
